@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="173" height="74" viewBox="0 0 173 74">
+  <g id="Group_4" data-name="Group 4" transform="translate(-482.005 -849.964)">
+    <g id="Group_3" data-name="Group 3" transform="translate(482.005 849.964)">
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(0 0)" fill="rgba(255,255,255,0)" stroke="#d72323" stroke-width="7">
+        <rect width="173" height="74" rx="28" stroke="none"/>
+        <rect x="3.5" y="3.5" width="166" height="67" rx="24.5" fill="none"/>
+      </g>
+    </g>
+    <text id="Say_Hello" data-name="Say Hello" transform="translate(502.005 897.964)" fill="#fff" font-size="30" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">Say Hello</tspan></text>
+  </g>
+</svg>
