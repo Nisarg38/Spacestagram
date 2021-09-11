@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Pageone from "../components/Pageone/Pageone";
 
 const Home = () => {
