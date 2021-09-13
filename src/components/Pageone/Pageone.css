@@ -1,11 +1,12 @@
 .svg1 {
   width: 500px;
   height: 500px;
-  position: fixed;
+
+  margin-bottom: -40px;
   left: 0;
   bottom: 0;
   padding: 0;
-  animation: leftside 2s ease-in-out infinite alternate;
+  animation: leftside 2.7s ease-in-out infinite alternate;
 }
 
 @keyframes leftside {
@@ -13,18 +14,18 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
 }
 
 .svg2 {
   width: 400px;
-  height: 400px;
+  height: 625px;
   position: fixed;
   right: 0;
-  top: 20;
+  top: 30;
   padding: 0;
-  animation: rightside 2s ease-in-out infinite alternate;
+  animation: rightside 2.5s ease-in-out infinite alternate;
 }
 
 @keyframes rightside {
@@ -32,11 +33,11 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 760px) {
   .svg2 {
     width: 0;
     height: 0;

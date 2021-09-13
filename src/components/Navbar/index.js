@@ -37,7 +37,7 @@ const Navbar = ({ toggle }) => {
           <NavLogo to="/" onClick={toggleHome}>
             <Logo>
               <Logoimg src={logo} />
-              <h1 style={{ color: "orange" }}>SPACE</h1>
+              <h1 style={{ color: "#FF6A3D" }}>SPACE</h1>
               <h1 style={{ color: "white" }}>stagram</h1>
             </Logo>
           </NavLogo>
