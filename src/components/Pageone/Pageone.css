@@ -1,8 +1,8 @@
 .svg1 {
   width: 500px;
   height: 500px;
-
   margin-bottom: -40px;
+  position: fixed;
   left: 0;
   bottom: 0;
   padding: 0;
@@ -20,7 +20,7 @@
 
 .svg2 {
   width: 400px;
-  height: 625px;
+  height: 450px;
   position: fixed;
   right: 0;
   top: 30;

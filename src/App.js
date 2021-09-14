@@ -48,19 +48,8 @@ function App() {
           <>
             <Sidebar />
             <Navbar />
-            {filteredData.map((post) => {
-              return (
-                <div>
-                  <Pageone
-                    id={post.id}
-                    date={post.earth_date}
-                    image={post.img_src}
-                    rover={post.rover}
-                    camera={post.camera}
-                  />
-                </div>
-              );
-            })}
+
+            <Pageone />
           </>
         )}
       </>
