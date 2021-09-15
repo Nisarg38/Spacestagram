@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Card, AppProvider } from "@shopify/polaris";
-import Skeleton from "./Skeleton";
 import nasa from "./nasa.jpg";
 import axios from "axios";
 
 const Item = styled.div`
-  margin-left: 1vw;
   height: 460px;
   width: 580px;
   border: solid #9daaf2 3px;
@@ -145,7 +142,12 @@ const Verticalscroll = (props) => {
   const filteredData = data.filter((post, id) => post.id);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       {filteredData.map((post) => {
         return (
           <Item style={{ positon: "absolute" }}>
