@@ -24,37 +24,11 @@ const Content = styled.div`
 `;
 
 const Pageone = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=C0AhMKBPXqpPU9pZrHZjgu5oTmINIkBrrdHwNL2T"
-      )
-      .then((res) => {
-        setData(res.data.photos);
-        console.log(res.data.photos);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
-  const filteredData = data.filter((post) => post.id);
-
   return (
     <Container id="home">
       <BgSvg />
       <Content>
-        {filteredData.map((post) => {
-          return (
-            <Verticalscroll
-              id={post.id}
-              date={post.earth_date}
-              image={post.img_src}
-              rover={post.rover}
-              camera={post.camera}
-            />
-          );
-        })}
+        <Verticalscroll />
       </Content>
     </Container>
   );
