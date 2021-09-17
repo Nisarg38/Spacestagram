@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import nasa from "./nasa.jpg";
 import axios from "axios";
+import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
 
 const Item = styled.div`
   height: 460px;
@@ -73,24 +74,33 @@ const CardShareInfo = styled.div`
 const LikeButton = styled.div``;
 
 const ShareButton = styled.div`
+  display: flex;
+  flex-direction: row;
   margin-left: 10px;
-  margin-right: 322px;
+  margin-right: 300px;
 
   @media screen and (max-width: 760px) {
     margin-right: 133px;
   }
 `;
 
+const LinkCopied = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  font-size: 16px;
+`;
+
 const Date = styled.h1`
   font-size: 22px;
-  color: lightgreen;
+  color: #9f55c3;
 `;
 
 const Info = styled.div`
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #ff6a3d;
+  color: #fd4770;
   display: flex;
   flex-direction: colums;
   @media screen and (max-width: 760px) {
@@ -103,7 +113,7 @@ const Status = styled.div`
   font-weight: bold;
   display: flex;
   flex-direction: colums;
-  color: lightgreen;
+  color: #9f55c3;
   align-items: center;
   @media screen and (max-width: 760px) {
     margin-top: 10px;
@@ -111,17 +121,17 @@ const Status = styled.div`
 `;
 
 const Verticalscroll = (props) => {
-  const { id, date, img, rover, camera } = props;
-  const [image, setImage] = useState([]);
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const copy = async (e) => {
+    await navigator.clipboard.writeText(e);
+  };
 
   const [isLike, setLike] = useState("false");
   const [isShare, setShare] = useState("false");
 
   const handleLike = () => {
     setLike(!isLike);
-  };
-  const handleShare = () => {
-    setShare(!isShare);
   };
 
   const [data, setData] = useState([]);
@@ -213,7 +223,10 @@ const Verticalscroll = (props) => {
                       border: "0",
                       cursor: "pointer",
                     }}
-                    onClick={handleShare}
+                    let
+                    onClick={() => {
+                      navigator.clipboard.writeText(post.img_src);
+                    }}
                   >
                     {isShare ? (
                       <>
@@ -230,7 +243,7 @@ const Verticalscroll = (props) => {
                         </svg>
                       </>
                     ) : (
-                      <>
+                      <div>
                         <svg
                           aria-label="like"
                           class="_8-yf5 "
@@ -242,7 +255,8 @@ const Verticalscroll = (props) => {
                         >
                           <path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path>
                         </svg>
-                      </>
+                        <h2>Picture Link Copied!!!</h2>
+                      </div>
                     )}
                   </button>
                 </ShareButton>
