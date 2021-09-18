@@ -13,6 +13,7 @@ import {
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "./logo.png";
+import github from "./github.svg";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setscrollNav] = useState(false);
@@ -45,42 +46,25 @@ const Navbar = ({ toggle }) => {
             <FaBars />
           </MobileIcon>
           <NavMenu>
+            <NavItems></NavItems>
+            <NavItems></NavItems>
             <NavItems>
-              <NavLinks
-                to="/aboutme"
-                smooth={true}
-                duration={600}
-                spy={true}
-                exact="true"
-                offset={-80}
-                activeClass="active"
-              >
-                About
-              </NavLinks>
-            </NavItems>
-            <NavItems>
-              <NavLinks
-                to="/api"
-                smooth={true}
-                duration={600}
-                spy={true}
-                exact="true"
-                offset={-80}
-                activeClass="active"
-              >
-                API
-              </NavLinks>
-            </NavItems>
-            <NavItems>
-              <NavLinks
-                to="/contact"
-                smooth={true}
-                duration={600}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Contact Me
+              <NavLinks>
+                <a
+                  href="https://github.com/Nisarg38/Spacestagram"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={github}
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      marginBottom: "20px",
+                    }}
+                    alt=""
+                  />
+                </a>
               </NavLinks>
             </NavItems>
           </NavMenu>
