@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import nasa from "./nasa.jpg";
 import axios from "axios";
-import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
 
 const Item = styled.div`
   height: 460px;
